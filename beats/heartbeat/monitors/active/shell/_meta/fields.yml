@@ -1,0 +1,22 @@
+- key: shell
+  title: "SHELL monitor"
+  description:
+  fields:
+    - name: shell
+      type: group
+      description: >
+        SHELL related fields.
+      fields:
+        - name: rtt
+          type: group
+          description: >
+            SHELL layer round trip times.
+          fields:
+            - name: validate
+              type: group
+              description: >
+                Duration of validation step based on existing SHELL connection.
+              fields:
+                - name: us
+                  type: long
+                  description: Duration in microseconds

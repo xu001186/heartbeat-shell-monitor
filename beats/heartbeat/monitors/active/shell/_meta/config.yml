@@ -1,0 +1,18 @@
+- type: shell
+  # list of hosts to monitor
+  hosts: ["1.2.3.4:12345"]
+  # Configure task schedule
+  schedule: '@every 30s'
+  username: root
+  password: 'password'
+
+  #key: @/private/key 
+  
+  check.request:
+    command: "echo"
+    args:  "hello"
+    dir: "/tmp"
+  check.output:
+    critical: "critical"
+    ok: "hello"
+
